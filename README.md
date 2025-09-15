@@ -1,4 +1,4 @@
-# APMT Analytics Chatbot
+# Data Analytics Chatbot
 
 A sophisticated natural language chatbot application that converts user questions into SQL queries and provides intelligent analytics responses with interactive visualizations. Built specifically for APMT (APM Terminals) analytics data.
 
