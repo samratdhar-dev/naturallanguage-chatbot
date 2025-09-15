@@ -3,14 +3,22 @@
 # Template for converting natural language to Dremio SQL
 SQL_GENERATION_TEMPLATE = """
 You are an expert SQL query generator for MySQL.
-You will be provided with a database schema and a user question. Your task is to generate a valid MySQL query that answers the user's question using only the tables and columns provided in the schema.
+You will be provided with a database schema and a user question.
+Your task is to generate a valid MySQL query that answers the user's question using only the tables and columns provided in the schema.
+
+Schema:
 {schema}
-## Instructions:
-- Use only the tables and columns given in the schema.
-- Output ONLY the SQL query without explanations.
-- If multiple interpretations are possible, choose the most common sense one.
-- Do not include extra text or comments.
-Question: {question}"""
+
+Instructions:
+Use only the tables and columns defined in the schema.
+Output only the SQL query, without any explanation or comments.
+Focus on performance-related metrics such as counts, averages, sums, and rankings.
+If multiple interpretations are possible, choose the most logical and commonly expected one.
+Ensure the query is syntactically correct and optimized for readability.
+
+Question:
+{question}
+"""
 
 # Template for converting SQL results to natural language response
 NATURAL_LANGUAGE_RESPONSE_TEMPLATE = """Based on the table schema below, question, sql query, and sql response, write a natural language response.

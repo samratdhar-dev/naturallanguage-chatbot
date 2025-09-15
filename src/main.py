@@ -4,7 +4,7 @@ from typing import Optional, List, Any
 from datetime import datetime
 import logging
 import uuid
-from .app_dremio_final import chat_with_sql
+from .chat import chat_with_sql
 import json
 
 # Configure logging
