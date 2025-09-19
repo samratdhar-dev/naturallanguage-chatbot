@@ -13,8 +13,10 @@ Instructions:
 Use only the tables and columns defined in the schema.
 Output only the SQL query, without any explanation or comments.
 Focus on performance-related metrics such as counts, averages, sums, and rankings.
+For string filtering, ALWAYS use LOWER(column) LIKE LOWER('%<value>%')
 If multiple interpretations are possible, choose the most logical and commonly expected one.
 Ensure the query is syntactically correct and optimized for readability.
+performance related metrics are defined from resolution count.
 
 Question:
 {question}
@@ -60,6 +62,7 @@ Makes it interactive with hover tooltips
 - Start directly with the python code. DO NOT start with: ```python 
 - End with: fig (to return the figure object)
 - Use the actual data structure provided, not sample data
+- Boxplots should be horizontal (orientation='h')
 
 Example data parsing:
 import pandas as pd
